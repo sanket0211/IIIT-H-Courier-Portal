@@ -1,0 +1,16 @@
+{{extend 'layout.html'}}
+<p>
+Enter money to add:<input type="number" id="add"/><br>
+Enter email address:<input type="text" id="email"/><br></p>
+<button onclick=t()>
+    Submit
+</button>
+<script>
+    var add;
+    var emai;
+    function t(){
+         add=document.getElementById("add").value;
+ 
+         emai=document.getElementById("email").value;
+       document.getElementById('hi').innerHTML=emai;}
+</script>

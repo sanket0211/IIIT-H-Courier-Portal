@@ -1,0 +1,95 @@
+{{extend 'default/layout3.html'}}
+
+<table align="center" style="margin-right:50px">
+    <tr>
+        <td colspan="2" bgcolor="#E6E6FA">
+<img src="{{=URL('static','images/hyd.jpg')}}" alt="IIIT-Hyderabad" width=1250px height=250px style="margin-bottom:10px">
+        </td>
+        </tr>
+    <tr><td colspan="2" bgcolor="#E6E6FA">
+<h1 style="font-family:courier;margin-left:400px"><b><u>
+    
+</b></u></h1></td></tr>
+    <tr><td bgcolor="#E6E6FA">
+<h2 style="margin-bottom:10px;padding:15px"><b><u>
+    Student's Login</b></u>
+</h2></td>
+        <td bgcolor="#E6E6FA">
+<h2 style="margin-bottom:10px;padding:15px"><b><u>
+    Security Login</b></u>
+</h2></td></tr>
+
+
+<script>
+function show() {
+          document.getElementById('hi').style.display='block';
+          document.getElementById('hi').style.float='right';
+}
+    function show1() {
+          document.getElementById('web2py_user_form').style.display='block';
+          document.getElementById('web2py_user_form').style.float='left';
+        
+}
+</script>
+<!--<script>
+        jQuery("#i input:visible:enabled:first").focus();
+{{if request.args(0)=='register':}}
+    web2py_validate_entropy(jQuery('#auth_user_password'),100);
+{{elif request.args(0) in ('change_password','reset_password'):}}
+    web2py_validate_entropy(jQuery('#no_table_new_password'),100);
+{{pass}}
+    }
+</script>-->
+    <tr><td bgcolor="#E6E6FA">
+        <div id="web2py_user_form" class="design" style="display=none;padding:15px">
+{{
+if request.args(0)=='login' and not session.auth_2_factor_user:
+    if not 'register' in auth.settings.actions_disabled:
+        form.add_button(T('Register'),URL(args='register', vars={'_next': request.vars._next} if request.vars._next else None),_class='btn')
+    pass
+    if not 'request_reset_password' in auth.settings.actions_disabled:
+        form.add_button(T('Lost Password'),URL(args='request_reset_password'),_class='btn')
+    pass
+pass
+=form
+}}
+            
+           
+</div>
+        <style>
+            
+        </style>
+        
+   </td>
+        <td bgcolor="#E6E6FA">
+            {{=form2}}
+             <div id="hi" style="display:none;position:relative">
+{{
+=auth.login()
+}}
+</div>
+</td>
+        </tr>
+    <tr>
+       
+         <td colspan="2" bgcolor="#E6E6FA">
+              <marquee style="color:#0066FF;text-align:center">
+                Fields marked with <span style="color:#000000">*</span> are required.
+            </marquee>
+             
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="padding-right:350px"><b>
+            Total no. of Couriers:{{=total}}</b>
+        </td > 
+        <td style="padding-right:350px;align:center"><b>
+            Total no. of Collected:{{=coll}}</b>
+        </td>
+        <td style="align:right"><b>
+            Total no. of pending:{{=notcoll}}</b>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,86 @@
+{{extend 'layout.html'}}
+
+<table>
+    <tr>
+        <td rowspan="7"><img src="{{=URL('download',args=p)}}" alt="Profile" style="height:300px;padding-right:20px;float:left" /></td>
+        <td style="font-size:20px;padding:10px">
+        Name : {{=first}} {{=last}}
+            </td>
+        <td>   
+        </td>
+    </tr>
+     <tr>
+        <td style="font-size:20px;padding:10px">
+        Email-Id : {{=email}}
+            </td>
+         <td>
+             
+         </td>
+    </tr>
+    <tr>
+        <td style="font-size:20px;padding:10px">
+       Roll No : {{=roll}}
+            </td>
+        <td>
+            
+        </td>
+       
+    </tr>
+    <tr>
+        <td style="font-size:20px;padding:10px">
+        Hostel : {{=hostel}}
+           </td> <td></td>
+    </tr>
+    <tr>
+        <td style="font-size:20px;padding:10px">
+        Room No. : {{=room}}
+           </td><td> </td>
+    </tr>
+    <tr>
+        
+        <td style="font-size:20px;padding:10px">
+       Contact No. : {{=contact}}
+           </td><td></td>
+    </tr>
+     <tr>
+        
+        <td style="font-size:20px;padding:10px">
+      Amount in Wallet : Rs. {{=cash1}}
+           </td>
+         <td>
+             
+         </td>
+    </tr>
+    <tr>
+        <td>
+           
+        </td>
+        <td style="font-size:20px;padding:10px">
+      Total couriers : {{=total}}
+           </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="font-size:20px;padding:10px">
+      Collected : {{=coll}}
+           </td><td>
+              
+          </td>
+    </tr>
+    <tr><td></td>
+        <td style="font-size:20px;padding:10px">
+       Not Collected : {{=notcoll}}
+           </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            
+        </td>
+        <td></td>
+    </tr>
+       
+</table>

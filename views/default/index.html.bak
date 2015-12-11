@@ -1,0 +1,96 @@
+{{extend 'default/layout3.html'}}
+
+<body style="background-color:#FFFFFF">
+<table id="page1" bgcolor:=000000 style="margin-left:0px;width:50%">
+    <tr>
+   <td style="background-color:#FFFFFF;padding-left:0px;padding-bottom:40px" >
+    <figure class="gallery-item">
+        
+        <img src="{{=URL('static','images/slider_2.jpg')}}" alt="new courier" height=200px width=220px>
+           
+        <figcaption class="img-title">
+             <a href="{{=URL('manage')}}">
+            <h4 style="text-align:center;font-color:#000000">List All Couriers</h4>
+                </a>
+            <a href="{{=URL('new_courier')}}">
+            <h4 style="text-align:center">Add New Courier</h4> 
+                 </a>
+        </figcaption>
+        </figure></td><td style="background-color:#FFFFFF;padding-top:25px" >
+<figure class="gallery-item">
+        
+    <img src="{{=URL('static','images/wallet.jpg')}}" alt="list all courier" height=500px width=220px>
+           
+        <figcaption class="img-title">
+             <a href="{{=URL('faq')}}#a">
+                <h4 style="text-align:center">
+                    About Wallet 
+                </h4>
+                </a>
+            <a href="{{=URL('cash')}}">
+            <h4 style="text-align:center">Update Wallet</h4>
+                </a>
+           
+        </figcaption>
+    </figure></td><td style="background-color:#FFFFFF;padding-top:60px" >
+<figure class="gallery-item">
+        
+    <img src="{{=URL('static','images/faq_small.png')}}" alt="new courier" height=300px width=220px>
+            
+        <figcaption class="img-title">
+            <a href="{{=URL('faq')}}">
+            <h4 style="text-align:center">
+                FAQ's</h4>
+                </a>
+        </figcaption>
+    </figure></td>
+        <td style="background-color:#FFFFFF" >
+        <figure class="gallery-item">
+        
+            <img src="{{=URL('static','images/Edit_user-512.png')}}" height=100px width=220px>
+            
+        <figcaption class="img-title">
+            <a href="{{=URL('profile')}}">
+            <h4 style="text-align:center">
+                My Profile</h4>
+                </a>
+            <a href="{{=URL('userprofileform')}}">
+            <h4 style="text-align:center">
+                User Profile</h4>
+                </a>
+        </figcaption>
+    </figure></td>
+        </tr>
+    </table>
+<marquee style="font-size:17px">
+    
+</marquee>
+
+<script>
+    $(document).ready( function() {
+        $(this).find('.img-title').fadeOut(0);
+
+    $('.gallery-item').hover( function() {
+        $(this).find('.img-title').fadeIn(300);
+    }, function() {
+        $(this).find('.img-title').fadeOut(100);
+    });
+	
+});
+</script>
+
+<table>
+    <tr>
+        <td style="padding-right:350px"><b>
+            Total no. of Couriers:{{=total}}</b>
+        </td > 
+        <td style="padding-right:350px;align:center"><b>
+            Total no. of Collected:{{=coll}}</b>
+        </td>
+        <td style="align:right"><b>
+            Total no. of pending:{{=notcoll}}</b>
+        </td>
+    </tr>
+</table>
+    <marquee style="font-size:17px;padding-top:10px"><i>
+   For any queries contact us at courier243@gmail.com</i></marquee>

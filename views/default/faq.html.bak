@@ -1,0 +1,98 @@
+{{extend 'layout1.html'}}
+<h1 style="font-color:647860">
+    FAQ's
+</h1>
+<table>
+    <tr>
+        <td>
+            
+       
+<ul style="font-size:20px">
+    <a href="#a">
+    <li style="padding:20px">
+        What is this new system of wallet?
+    </li>
+        </a>
+    <a href="#b">
+    <li style="padding:20px">
+        Why does it show an error when I try registering through an email-id other than the IIIT user account?
+    </li>
+        </a>
+    <a href="#c">
+    <li style="padding:20px">
+        Who are the security personnel in-charge of managing courier?
+    </li>
+        </a>
+    <a href="#d">
+    <li style="padding:20px">
+        Whom should I contact if I find some discrepancies in the portal?
+    </li>
+        </a>
+    <a href="#e">
+    <li style="padding:20px">
+       Till what extent can we trust the wallet system? 
+        </li>
+        </a>
+        <a href="#f">
+    <li style="padding:20px">
+          Are the portal managers looking to recruit personnel as managers of the portal?
+    </li>
+        </a>
+</ul>
+
+
+<ul>
+    <li style="font-size:20px;padding-bottom:5px">
+        <a name="a">
+        
+           What is this new system of wallet? 
+        </a></li>
+        <p style="font-size:15px;padding-bottom:20px">
+            This system of wallet helps you to recieve your deliveries from the online buying stores without worring about being present when the delivery boy arrives, because you have selected the cash on delivery option. You can put some cash in the wallet by making payment to the security personnel. (dont worry this is quite safe.) Now as the delivery comes, the security personnel checks your wallet. If the required cash is present in the wallet then he can make the payment and recieve your  order and updates your cash from the wallet. 
+        </p>
+    
+    <li style="font-size:20px;padding-bottom:5px">
+        <a name="b">
+        
+           Why does it show an error when I try registering through an email-id other than the IIIT user account?
+       </a></li>
+        <p style="font-size:15px;padding-bottom:20px">
+            This is the IIIT-H Courier portal. So pre-assumed that only IIIT-H students can register into the protal. This makes the portal much more secure. You can use any(research or students account) to register. So the must condition to use this portal is that you should have IIIT-H account. 
+       </p>
+    
+    <li style="font-size:20px;padding-bottom:5px">
+        <a name="c">
+    
+            Who are the security personnel in-charge of managing courier?
+        </a></li>
+        <p style="font-size:15px;padding-bottom:20px">
+           The security personnel is Mr X, and Mr Y. These are the people who sit at the Nilgiri office where the couriers come. The security personnel in charge of managing the portal keep changing as per the shifts in their duties at the Nilgiri building. 
+        </p>
+     <li style="font-size:20px;padding-bottom:5px">
+        <a name="d">
+    
+           Whom should I contact if I find some discrepancies in the portal?
+        </a></li>
+        <p style="font-size:15px;padding-bottom:20px">
+           You can sure cantact Mr. Sanket Shah(sanket.shah@research.iiit.ac.in) and Mr. Aagam Shah(aagam.shah@research.iiit.ac.in) to discuss anything pertaining to the portal. The portal managers will surely be there to listen to your voice.
+        </p>
+    <li style="font-size:20px;padding-bottom:5px">
+        <a name="e">
+       Till what extent can we trust the wallet system?
+        </a></li>
+        <p style="font-size:15px;padding-bottom:20px">
+           You can trust the portal system 100%. This is complete bug-free system. We have put the function which shall send you an automated email if any changes are made to your portal. You shall be able to see the updated value in your wallet in the email. And any illegal act shall be considered unethical and will be looked upon by the IIIT-H authority. Without worrying you can take the maximum benefits of this new system. 
+        </p>
+    <li style="font-size:20px;padding-bottom:5px">
+        <a name="f">
+      Are the portal managers looking to recruit personnel as managers of the portal?
+        </a></li>
+        <p style="font-size:15px;padding-bottom:20px">
+           Yes, you are right. We are looking for talented porsennel who can assist us in managing the portal. Jus contact us if you can think you are capable enough to handle the portal. 
+        </p>
+    
+    
+</ul>
+             </td>
+    </tr>
+</table>

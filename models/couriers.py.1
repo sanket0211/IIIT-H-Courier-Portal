@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+db=DAL('sqlite://storage.db')
+db.define_table('Couriers',
+                Field('Name of Student',requires=IS_NOT_EMPTY()),
+                Field('Courier Company',requires=IS_NOT_EMPTY()),
+                Field('Hostel','text',requires=IS_NOT_EMPTY()),
+                Field('time_stamp','datetime',requires=IS_NOT_EMPTY()))

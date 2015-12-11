@@ -1,0 +1,48 @@
+/* Uncomment everything commented to CSS for the hide/show */
+
+.gallery {
+    width: 25em;
+    margin: 2em auto;
+}
+
+.gallery-item {
+    height: auto;
+    width: 48.618784527%;
+    float: left;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+    .gallery-item:first-child {
+        margin-right: 2.762430939%;
+        padding-left: 0;
+    }
+
+.gallery-item img {
+    width: 100%;
+}
+
+.gallery-item:hover .img-title {
+    /*opacity: 1;*/
+}
+
+.img-title {
+   
+    top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /*opacity: 0;*/
+    display: none; /* comment this out for CSS hover */
+    background-color: #333;
+    /*transition: all 0.5s ease;*/
+}
+
+    .img-title h5 {
+        
+        color: #fff;
+        top: 33%;
+        width: 100%;
+        text-align: center;
+    }

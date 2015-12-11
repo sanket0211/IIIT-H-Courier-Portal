@@ -1,0 +1,6 @@
+{{extend 'layout.html'}}
+<h3>
+    
+
+Enter the first name and second name of the user.</h3>
+{{=form}}
