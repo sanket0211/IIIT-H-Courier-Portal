@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from plugin_notemptymarker import mark_not_empty, unmark_not_empty
-sn = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
+sn = DAL('mysql://root:mysql0211@localhost/test')
 sn.define_table('courier',
                 Field('first_name',requires=IS_NOT_EMPTY()),
                 Field('last_name',requires=IS_NOT_EMPTY()),

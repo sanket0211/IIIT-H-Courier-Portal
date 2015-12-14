@@ -186674,3 +186674,1182 @@ success!
 success!
 success!
 success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2015-12-14T11:48:03.491456
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    Roll_No INT,
+    Wallet INT,
+    Hostel VARCHAR(512),
+    Room_No VARCHAR(512),
+    Contact_No VARCHAR(512),
+    Photo VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:03.806452
+CREATE TABLE auth_group(
+    id INT AUTO_INCREMENT NOT NULL,
+    role VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.000535
+CREATE TABLE auth_membership(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT, INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INT, INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.130763
+CREATE TABLE auth_permission(
+    id INT AUTO_INCREMENT NOT NULL,
+    group_id INT, INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    table_name VARCHAR(512),
+    record_id INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.232053
+CREATE TABLE auth_event(
+    id INT AUTO_INCREMENT NOT NULL,
+    time_stamp DATETIME,
+    client_ip VARCHAR(512),
+    user_id INT, INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.320948
+CREATE TABLE auth_cas(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT, INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on DATETIME,
+    service VARCHAR(512),
+    ticket VARCHAR(512),
+    renew CHAR(1),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.411766
+CREATE TABLE cash(
+    id INT AUTO_INCREMENT NOT NULL,
+    email VARCHAR(512),
+    Add_Or_Subtract VARCHAR(512),
+    Transaction_Amount INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.557051
+CREATE TABLE passkey(
+    id INT AUTO_INCREMENT NOT NULL,
+    passkey VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.693535
+CREATE TABLE edit1(
+    id INT AUTO_INCREMENT NOT NULL,
+    Edit_Photo VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.802842
+CREATE TABLE roo(
+    id INT AUTO_INCREMENT NOT NULL,
+    Edit_Room_No VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:04.936851
+CREATE TABLE hoste(
+    id INT AUTO_INCREMENT NOT NULL,
+    Edit_Hostel VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:05.048656
+CREATE TABLE contac(
+    id INT AUTO_INCREMENT NOT NULL,
+    Edit_Number VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T11:48:05.160377
+CREATE TABLE anonymousprofile(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(512),
+    last_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2015-12-14T12:17:26.467999
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:17:27.047983
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:17:27.381819
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:17:27.727482
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:17:28.039720
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:17:28.376041
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:17:28.733389
+CREATE TABLE courier(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(512),
+    last_name VARCHAR(512),
+    Courier_Company VARCHAR(512),
+    Hostel VARCHAR(512),
+    time_stamp DATETIME,
+    Collected CHAR(1),
+    room_no INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-14T12:17:28.842693
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:17:29.191909
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:17:29.547056
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:17:29.904581
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:17:30.260575
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:17:30.596563
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:17:36.271787
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:17:36.836278
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:17:37.482387
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:17:38.105447
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:17:38.417576
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:17:38.788330
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:17:39.163261
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:17:39.467527
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:17:39.813611
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:17:40.158524
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:17:40.515833
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:17:40.841289
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:18:17.818202
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:18:18.400213
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:18:18.835787
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:18:19.214239
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:18:19.604442
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:18:19.930082
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:18:20.296074
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:18:20.732726
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:18:21.089717
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:18:21.434828
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:18:21.858675
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:18:22.172330
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:06.573739
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:19:06.923415
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:19:07.268489
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:19:07.605040
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:19:07.907562
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:19:08.274053
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:19:08.655498
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:08.943047
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:09.278065
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:09.634115
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:19:09.960181
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:19:10.305048
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:17.757231
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:19:18.166389
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:19:18.489321
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:19:18.847944
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:19:19.204556
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:19:19.527980
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:19:19.879957
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:20.174890
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:20.487334
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:20.834585
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:19:21.169420
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:19:21.525680
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:41.492283
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:19:41.933668
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:19:42.290346
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:19:42.649041
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:19:42.994669
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:19:43.329221
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:19:43.651587
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:43.986899
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:44.333571
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:44.702372
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:19:45.037296
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:19:45.371202
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:54.516399
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:19:54.895539
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:19:55.196666
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:19:55.567914
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:19:55.911960
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:19:56.224225
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:19:56.592418
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:56.926464
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:57.261192
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:57.573199
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:19:57.934551
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:19:58.232933
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:19:58.737120
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:19:59.258072
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:19:59.626222
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:19:59.962967
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:20:00.320078
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:20:00.665050
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:20:01.026864
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:01.336136
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:01.713406
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:02.069645
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:20:02.417663
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:20:02.784809
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:17.759494
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:20:18.146422
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:20:18.504694
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:20:18.828170
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:20:19.140562
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:20:19.475173
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:20:19.846961
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:20.177679
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:20.501340
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:20.837012
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:20:21.151381
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:20:21.483919
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:43.139740
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:20:43.512176
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:20:43.859924
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:20:44.172502
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:20:44.528743
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:20:44.885347
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:20:45.217697
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:45.521024
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:45.889117
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:46.258766
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:20:46.616271
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:20:46.960958
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:47.489550
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:20:48.230702
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:20:48.578605
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:20:48.912960
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:20:49.225171
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:20:49.570642
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:20:49.948553
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:50.273003
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:50.574834
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:20:50.921811
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:20:51.246810
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:20:51.570068
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:21:17.758451
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:21:18.104081
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:21:18.449707
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:21:18.806129
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:21:19.151755
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:21:19.475174
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:21:19.855681
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:21:20.233329
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:21:20.558472
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:21:20.892921
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:21:21.216819
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:21:21.550927
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:22:17.748108
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:22:18.128341
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:22:18.462588
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:22:18.852761
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:22:19.220533
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:22:19.532991
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:22:19.878684
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:22:20.215173
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:22:20.571901
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:22:20.928936
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:22:21.274629
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:22:21.641599
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:23:17.786797
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:23:18.314870
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:23:18.974410
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:23:19.342301
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:23:19.687795
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:23:20.044690
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:23:20.457641
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:23:20.757918
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:23:21.115260
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:23:21.417999
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:23:21.764454
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:23:22.109504
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:24:17.755822
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:24:18.182639
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:24:18.826863
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:24:19.171928
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:24:19.497738
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:24:19.798388
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:24:20.121045
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:24:20.456326
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:24:20.824480
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:24:21.159125
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:24:21.516428
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:24:21.874388
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:25:17.760486
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:25:18.257717
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:25:18.625262
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:25:18.959648
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:25:19.283358
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:25:19.606764
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:25:19.986256
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:25:20.322245
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:25:20.656821
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:25:21.024308
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:25:21.392766
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:25:21.748740
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:26:17.753811
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:26:18.122615
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:26:18.493019
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:26:18.871468
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:26:19.205867
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:26:19.518272
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:26:19.900118
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:26:20.231753
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:26:20.557609
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:26:20.925269
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:26:21.271077
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:26:21.627445
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:27:17.758886
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:27:18.165695
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:27:18.555253
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:27:18.900270
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:27:19.268056
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:27:19.582297
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:27:19.968881
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:27:20.317859
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:27:20.630506
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:27:20.986928
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:27:21.355329
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:27:21.722376
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:28:17.781248
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:28:18.245443
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:28:18.613228
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:28:18.925402
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:28:19.282430
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:28:19.663242
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:28:20.007062
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:28:20.310050
+ALTER TABLE auth_user ADD photo VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:28:20.633744
+ALTER TABLE auth_user ADD contact_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:28:21.012736
+ALTER TABLE auth_user ADD wallet INT;
+success!
+timestamp: 2015-12-14T12:28:21.383702
+ALTER TABLE auth_user ADD roll_no INT;
+success!
+timestamp: 2015-12-14T12:28:21.695028
+ALTER TABLE auth_user ADD hostel VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:29:17.752221
+ALTER TABLE auth_user DROP COLUMN room_no;
+success!
+timestamp: 2015-12-14T12:29:18.122931
+ALTER TABLE auth_user DROP COLUMN wallet;
+success!
+timestamp: 2015-12-14T12:29:18.479805
+ALTER TABLE auth_user DROP COLUMN photo;
+success!
+timestamp: 2015-12-14T12:29:18.847340
+ALTER TABLE auth_user DROP COLUMN contact_no;
+success!
+timestamp: 2015-12-14T12:29:19.226213
+ALTER TABLE auth_user DROP COLUMN roll_no;
+success!
+timestamp: 2015-12-14T12:29:19.571745
+ALTER TABLE auth_user DROP COLUMN hostel;
+success!
+timestamp: 2015-12-14T12:29:19.936232
+ALTER TABLE auth_user ADD room_no VARCHAR(512);
+success!
+timestamp: 2015-12-14T12:29:20.404905
+ALTER TABLE auth_user ADD photo VARCHAR(512);

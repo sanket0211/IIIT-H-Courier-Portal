@@ -11,7 +11,7 @@
 
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
-    db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
+    db = DAL('mysql://root:mysql0211@localhost/test')
 else:
     ## connect to Google BigTable (optional 'google:datastore://namespace')
     db = DAL('google:datastore+ndb')
@@ -53,6 +53,9 @@ service = Service()
 plugins = PluginManager()
 
 auth.settings.extra_fields['auth_user']=[Field('Roll_No','integer',requires=IS_NOT_EMPTY()),Field('Wallet','integer',default='0',requires=IS_INT_IN_RANGE()),Field('Hostel',requires=IS_IN_SET({'OBH','OBH-D','OBH-E','NBH','BAKUL','GH','GHEB','NBH Cellar'})),Field('Room_No',requires=IS_NOT_EMPTY()),Field('Contact_No',requires=IS_MATCH('[1-9][0-9]{9}')),Field('Photo','upload',uploadfield=True,default=os.path.join(request.folder,'static','images','Edit_user-512.png'))]
+
+
+
 
 ##auth=mark_not_empty(db.auth_user)
 ## create all tables needed by auth if not custom tables

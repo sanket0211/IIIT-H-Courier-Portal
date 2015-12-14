@@ -11,7 +11,7 @@
 
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
-    db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
+    db = DAL('mysql://root:mysql0211@localhost/test')
 else:
     ## connect to Google BigTable (optional 'google:datastore://namespace')
     db = DAL('google:datastore+ndb')
@@ -78,7 +78,7 @@ mail.settings.login = 'courieriiit243:sanketaagam'
 
 ## configure auth policy
 auth.settings.table_user.email.requires=[IS_MATCH('.*@.*\.iiit\.ac\.in'),IS_NOT_IN_DB(db,auth.settings.table_user.email)]
-auth.settings.registration_requires_verification = True
+auth.settings.registration_requires_verification = False
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
 ###
